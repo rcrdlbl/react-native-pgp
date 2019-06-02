@@ -7,13 +7,28 @@ class EncodeScreen extends Component {
     title: 'Compose Message'
   }
 
+  state = {
+    messageContent: ""
+  }
+
+  onNextButtonPress() {
+    true
+  }
+
+  onMessageFieldChange(text) {
+    this.setState({
+      messageContent: text
+    })
+  }
+
   render() {
     return(
       <ScrollView>
-        <MessageInputField />
+        <MessageInputField onChange={this.onMessageFieldChange} />
         <Button
           title="Next >>"
           accessibilityLabel="Encode"
+          onPress={this.onNextButtonPress}
         />
       </ScrollView>
     )
