@@ -3,9 +3,9 @@ import { AppRegistry, ScrollView, Button } from 'react-native';
 import { createStackNavigator, createAppContainer } from 'react-navigation'
 import MessageInputField from '../components/MessageInputField'
 
-class EncodeScreen extends Component {
+class EnterTargetKeyScreen extends Component {
   static navigationOptions = {
-    title: 'Compose Message'
+    title: 'Input Recipient Public Key'
   }
 
   state = {
@@ -25,11 +25,11 @@ class EncodeScreen extends Component {
         <Button
           title="Next >>"
           accessibilityLabel="Encode"
-          onPress={() => this.props.navigation.navigate('EnterTargetKey')}
+          onPress={() => this.props.navigation.navigate('EncodingResult')}
         />
       </ScrollView>
     )
   }
 }
 
-export default EncodeScreen
+export default EnterTargetKeyScreen

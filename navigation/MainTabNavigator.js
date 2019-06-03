@@ -3,6 +3,8 @@ import { Platform } from 'react-native';
 import { createStackNavigator, createBottomTabNavigator } from 'react-navigation';
 
 import TabBarIcon from '../components/TabBarIcon';
+import EnterTargetKeyScreen from '../screens/EnterTargetKeyScreen'
+import EncodingResultScreen from '../screens/EncodingResultScreen'
 import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
 import SettingsScreen from '../screens/SettingsScreen';
@@ -10,6 +12,11 @@ import EncodeScreen from '../screens/EncodeScreen'
 
 const HomeStack = createStackNavigator({
   Home: EncodeScreen,
+  EnterTargetKey: EnterTargetKeyScreen,
+  EncodingResult: EncodingResultScreen
+},
+{
+  initialRouteName: 'Home'
 });
 
 HomeStack.navigationOptions = {
