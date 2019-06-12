@@ -6,7 +6,9 @@ import TabBarIcon from '../components/TabBarIcon';
 import EnterTargetKeyScreen from '../screens/EnterTargetKeyScreen'
 import EncodingResultScreen from '../screens/EncodingResultScreen'
 import HomeScreen from '../screens/HomeScreen';
-import LinksScreen from '../screens/LinksScreen';
+
+
+import EncryptedMessageScreen from '../screens/EncryptedMessageScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 import EncodeScreen from '../screens/EncodeScreen'
 
@@ -33,8 +35,12 @@ HomeStack.navigationOptions = {
   ),
 };
 
-const LinksStack = createStackNavigator({
-  Links: LinksScreen,
+const DecodeStack = createStackNavigator({
+  EncryptedMessage: EncryptedMessageScreen,
+  DecryptedMessage: DecryptedMessageScreen
+},
+{
+  initalRouteName: 'Decode'
 });
 
 LinksStack.navigationOptions = {
