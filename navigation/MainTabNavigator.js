@@ -9,6 +9,7 @@ import HomeScreen from '../screens/HomeScreen';
 
 
 import EncryptedMessageScreen from '../screens/EncryptedMessageScreen';
+import DecryptedMessageScreen from '../screens/DecryptedMessageScreen'
 import SettingsScreen from '../screens/SettingsScreen';
 import EncodeScreen from '../screens/EncodeScreen'
 
@@ -43,7 +44,7 @@ const DecodeStack = createStackNavigator({
   initalRouteName: 'Decode'
 });
 
-LinksStack.navigationOptions = {
+DecodeStack.navigationOptions = {
   tabBarLabel: 'Decode',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
@@ -69,6 +70,6 @@ SettingsStack.navigationOptions = {
 
 export default createBottomTabNavigator({
   HomeStack,
-  LinksStack,
+  DecodeStack,
   SettingsStack,
 });
