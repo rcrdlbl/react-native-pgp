@@ -25,7 +25,7 @@ class EncodeScreen extends Component {
         <Button
           title="Next >>"
           accessibilityLabel="Encode"
-          onPress={() => this.props.navigation.navigate('DecodedMessage')}
+          onPress={() => this.props.navigation.navigate('EnterTargetKey')}
         />
       </ScrollView>
     )
